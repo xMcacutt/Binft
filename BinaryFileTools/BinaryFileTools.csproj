@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -6,6 +6,17 @@
     <Nullable>enable</Nullable>
     <RootNamespace>Binft</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>xMcacutt.Binft</PackageId>
+    <Title>Binft</Title>
+    <Authors>xMcacutt</Authors>
+    <Product>Binft</Product>
+    <Description>Binary File Tools. A high level library created to assist with the research and reversal of proprietary file formats in C#.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>bnfticon.png</PackageIcon>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/xMcacutt/Binft</RepositoryUrl>
+    <PackageTags>binary file; xentax; reverse engineering; file formats;</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -15,5 +26,16 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>none</DebugType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\bnfticon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
