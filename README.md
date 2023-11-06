@@ -1,4 +1,4 @@
-![Binft](/binft.png)
+![Binft](./binft.png)
 
 # Binft - Binary File Tools
 
@@ -114,7 +114,7 @@ The <span style="color:mediumseagreen">Binf</span> class only contains one prope
 ## Examples
 
 For a comprehensive archive extraction example, the DIP Tools extraction class has been updated to use the binft package. 
-[DIP Tools Extractor.cs]{https://github.com/xMcacutt/Yukes-DIP-Tools/blob/master/DIP%20Extractor/Extractor.cs}
+[DIP Tools Extractor.cs](https://github.com/xMcacutt/Yukes-DIP-Tools/blob/master/DIP%20Extractor/Extractor.cs)
 
 ## Future Plans
 

@@ -12,14 +12,15 @@
     <Authors>xMcacutt</Authors>
     <Product>Binft</Product>
     <Description>Binary File Tools. A high level library created to assist with the research and reversal of proprietary file formats in C#.</Description>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>nuget README.md</PackageReadmeFile>
     <PackageIcon>bnfticon.png</PackageIcon>
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageProjectUrl>https://www.nuget.org/packages/xMcacutt.Binft</PackageProjectUrl>
     <RepositoryUrl>https://github.com/xMcacutt/Binft</RepositoryUrl>
     <PackageTags>binary file; xentax; reverse engineering; file formats;</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -35,7 +36,7 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\README.md">
+    <None Include="..\nuget README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
