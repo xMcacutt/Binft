@@ -16,7 +16,7 @@ public static void Main(string[] args){
     bool isLittleEndian = true;
     if(!File.Exists(args[0])) return;
     string filePath = args[0];
-    Binf binf = Binft.CreateFile(filePath, isLittleEndian);
+    Binf binf = Binft.CreateBinf(filePath, isLittleEndian);
 }
 
 
@@ -24,13 +24,13 @@ public static void Main(string[] args){
 public static void Main(string[] args){
     bool isLittleEndian = false;
     string filePath = args[0];
-    Binf binf = Binft.OpenFile(filePath, isLittleEndian);
+    Binf binf = Binft.OpenBinf(filePath, isLittleEndian);
 }
 ```
 
 ## DataRead
 
-The <span style="color:mediumseagreen">DataRead</span> class is not visible to the end user. It provides a variable endian implementation of the <span style="color:mediumseagreen">BitConverter</span> class. The endianness of the binary file is specified in the <span style="color:khaki">OpenFile</span> or <span style="color:khaki">CreateFile</span> methods belonging to <span style="color:mediumseagreen">Binft</span>. These methods access the <span style="color:mediumseagreen">Binf</span> constructor which sets the endiannes of the file. The endianness boolean is passed to all of the <span style="color:mediumseagreen">DataRead</span> methods so after the create or open method, no attention needs to be given to the endianness when processing data. 
+The <span style="color:mediumseagreen">DataRead</span> class is not visible to the end user. It provides a variable endian implementation of the <span style="color:mediumseagreen">BitConverter</span> class. The endianness of the binary file is specified in the <span style="color:khaki">OpenBinf</span> or <span style="color:khaki">CreateBinf</span> methods belonging to <span style="color:mediumseagreen">Binft</span>. These methods access the <span style="color:mediumseagreen">Binf</span> constructor which sets the endiannes of the file. The endianness boolean is passed to all of the <span style="color:mediumseagreen">DataRead</span> methods so after the create or open method, no attention needs to be given to the endianness when processing data. 
 
 When writing data, the following data types can be provided to the <span style="color:khaki">Write</span> method:
 
@@ -110,6 +110,11 @@ The <span style="color:mediumseagreen">Binf</span> class is the general purpose 
 #### Properties
 
 The <span style="color:mediumseagreen">Binf</span> class only contains one property, <span style="color:plum">Position</span>, which can be used to get the current position of the stream in the file.
+
+## Examples
+
+For a comprehensive archive extraction example, the DIP Tools extraction class has been updated to use the binft package. 
+[DIP Tools Extractor.cs]{https://github.com/xMcacutt/Yukes-DIP-Tools/blob/master/DIP%20Extractor/Extractor.cs}
 
 ## Future Plans
 
