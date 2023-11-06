@@ -146,8 +146,8 @@ namespace Binft
 
         ///<summary>Reads a null terminated string from the file. The number of bytes advanced through the stream is set by the length param.</summary>
         ///<param name="length">Sets the exact length to advance through the stream (the total space the string COULD use).</param>
-        ///<returns>A string read from the current position in the file up to the first null (0x0) byte.</returns>
-        public string ReadString(int length)
+        ///<returns>A fixedstring read from the current position in the file up to the first null (0x0) byte.</returns>
+        public fixedstring ReadString(int length)
         {
             var stringData = ReadBytes(length);
             StringBuilder sb = new();
@@ -160,14 +160,14 @@ namespace Binft
                 b = stringData[i];
                 i++;
             }
-            return sb.ToString();
+            return new fixedstring(sb.ToString(), length);
         }
 
         ///<summary>Reads a null terminated string from the file. The number of bytes advanced through the stream is set by the length param.</summary>
         ///<param name="length">Sets the exact length to advance through the stream (the total space the string COULD use).</param>
         ///<param name="x">The char used to terminate the string.</param>
-        ///<returns>A string read from the current position in the file up to the first terminating byte.</returns>
-        public string ReadString(int length, char x)
+        ///<returns>A fixedstring read from the current position in the file up to the first terminating byte.</returns>
+        public fixedstring ReadString(int length, char x)
         {
             var stringData = ReadBytes(length);
             StringBuilder sb = new();
@@ -180,10 +180,10 @@ namespace Binft
                 b = stringData[i];
                 i++;
             }
-            return sb.ToString();
+            return new fixedstring(sb.ToString(), length);
         }
 
-        ///<summary>Reads a float array from the file, advancing the stream by as many bytes as the length specified multiplied by 4.</summary>
+        ///<summary>Reads a float array from the file, advancing the stream by as many bytes as the count specified multiplied by 4.</summary>
         ///<param name="count">The number of floats to read.</param>
         ///<returns>A float array of size "count" containing the read floats.</returns>
         public float[] ReadFloatArray(int count)
@@ -196,7 +196,7 @@ namespace Binft
             return floatData;
         }
 
-        ///<summary>Reads an int array from the file, advancing the stream by as many bytes as the length specified multiplied by 4.</summary>
+        ///<summary>Reads an int array from the file, advancing the stream by as many bytes as the count specified multiplied by 4.</summary>
         ///<param name="count">The number of ints to read.</param>
         ///<returns>An int array of size "count" containing the read floats.</returns>
         public int[] ReadIntArray(int count)

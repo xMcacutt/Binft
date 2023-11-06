@@ -27,6 +27,46 @@ namespace Binft
             return GetBytes(value, littleEndian);
         }
 
+        internal unsafe static byte[] GetBytes(fixedstring value, bool littleEndian)
+        {
+            return value.GetBytes();
+        }
+
+        internal unsafe static byte[] GetBytes(string value, bool littleEndian)
+        {
+            return Encoding.ASCII.GetBytes(value);
+        }
+
+        internal unsafe static byte[] GetBytes(float[] value, bool littleEndian)
+        {
+            return value.SelectMany(f => GetBytes(f, littleEndian)).ToArray();
+        }
+
+        internal unsafe static byte[] GetBytes(int[] value, bool littleEndian)
+        {
+            return value.SelectMany(i => GetBytes(i, littleEndian)).ToArray();
+        }
+
+        internal unsafe static byte[] GetBytes(short[] value, bool littleEndian)
+        {
+            return value.SelectMany(s => GetBytes(s, littleEndian)).ToArray();
+        }
+
+        internal unsafe static byte[] GetBytes(long[] value, bool littleEndian)
+        {
+            return value.SelectMany(l => GetBytes(l, littleEndian)).ToArray();
+        }
+
+        internal unsafe static byte[] GetBytes(double[] value, bool littleEndian)
+        {
+            return value.SelectMany(d => GetBytes(d, littleEndian)).ToArray();
+        }
+
+        internal unsafe static byte[] GetBytes(byte value, bool littleEndian)
+        {
+            return new byte[] { value };
+        }
+
         internal unsafe static byte[] GetBytes(short value, bool littleEndian)
         {
             byte[] array = new byte[2];
