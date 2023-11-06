@@ -14,7 +14,7 @@
     <Description>Binary File Tools. A high level library created to assist with the research and reversal of proprietary file formats in C#.</Description>
     <PackageReadmeFile>nuget README.md</PackageReadmeFile>
     <PackageIcon>bnfticon.png</PackageIcon>
-    <PackageProjectUrl>https://www.nuget.org/packages/xMcacutt.Binft</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/xMcacutt/Binft</PackageProjectUrl>
     <RepositoryUrl>https://github.com/xMcacutt/Binft</RepositoryUrl>
     <PackageTags>binary file; xentax; reverse engineering; file formats;</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
