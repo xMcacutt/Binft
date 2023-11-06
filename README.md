@@ -1,3 +1,5 @@
+![Binft](/binft.png)
+
 # Binft - Binary File Tools
 
 Binft was created to assist with reading and writing data to filestreams when working with binary files for reverse engineering and researching file formats. This library provides a very high level api to make repetitive coding patterns in reading and writing data significantly shorter. 
